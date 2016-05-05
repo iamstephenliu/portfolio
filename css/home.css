@@ -1,0 +1,99 @@
+/* TOP SECTION */
+#top {
+	background:url('../images/banner.jpg') no-repeat fixed top;
+}
+
+/* END TOP SECTION */
+
+/*PROJECT SECTION*/
+
+.project {
+	text-align:center;
+	width:250px;
+	height:250px;
+	margin:1em auto;
+	background-size:100% 100%;
+}
+
+.projecttext {
+	color:#FFFFFF;
+	width:250px;
+	height:250px;
+	background:rgba(110,119,131,0.6);
+}
+
+.projecttext div {
+	z-index:10;
+	vertical-align: middle;
+	padding:10%;
+}
+
+.projecttext div h6 { font-weight:600;}
+.projecttext div hr {margin:0 0 1em;;}
+.projecttext div p {font-size:0.9em;}
+
+
+#project1 {	background:url('../projects/solace.jpg') no-repeat; background-size:100% 100%; }
+#project2 {	background:url('../projects/whereisthebuswhen.jpg') no-repeat; background-size:100% 100%; }
+#project3 {	background:url('../projects/1000words.jpg') no-repeat; background-size:100% 100%; }
+#project4 {	background:url('../projects/jantarmantar.jpg') no-repeat; background-size:100% 100%; }
+#project5 {	background:url('../projects/readysteadygo.jpg') no-repeat; background-size:100% 100%; }
+#project6 {	background:url('../projects/colorsoftime.jpg') no-repeat; background-size:100% 100%; }
+
+.two.columns {display:none;}
+
+/* END PROJECT SECTION */
+
+/* PHOTOGRAPHY SECTION */
+#photography {
+	box-shadow:0 0 1em 1em #E0E3DA;
+	margin:3em auto 0;
+}
+/* END PHOTOGRAPHY SECTION*/
+
+/*MUSIC SECTION*/
+
+.album {
+	margin:1em;
+}
+/*END MUSIC SECTION*/
+
+/* Larger than mobile */
+@media (min-width: 400px) {}
+
+/* Larger than phablet (also point when grid becomes active) */
+@media (min-width: 640px) {
+
+	/*PROJECTS*/
+	.project , .projecttext {width:100%;}
+	.two.columns {display:block;;}
+}
+
+/* Larger than tablet */
+@media (min-width: 769px) {
+
+ /*PROJECTS*/
+
+	.projecttext {display:none;}
+
+	#project1:hover #projecttext1 {display:block;}
+	#project2:hover #projecttext2 {display:block;}
+	#project3:hover #projecttext3 {display:block;}
+	#project4:hover #projecttext4 {display:block;}
+	#project5:hover #projecttext5 {display:block;}
+	#project6:hover #projecttext6 {display:block;}
+
+	.projecttext div hr , .projecttext div p {display:block;}
+
+}
+
+/* Larger than desktop */
+@media (min-width: 1000px) {
+
+	/*PROJECTS*/
+	.project , .projecttext {width:100%;}
+}
+
+/* Larger than Desktop HD */
+@media (min-width: 1280px) {
+}

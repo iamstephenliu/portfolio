@@ -1,0 +1,180 @@
+.head{
+	margin-left: 0px;
+	height: 100px;
+}
+hr{
+	margin-bottom:0px; 
+	margin-top:0px;
+}
+.logo{
+	margin-left: 20px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+.tabs{
+
+}
+.nav-tabs{
+	margin-left: 15px;
+}
+.tab-content{
+	margin-left: 20px;
+	min-height: 400px;
+}
+
+footer{
+	margin-top: 20px;
+	width:100%;
+	height:100px;
+	background-color: #073d7c;
+	color: #ffffff;
+}
+.footer_content{
+
+padding: 25px;
+	
+}
+
+.route_tabs{
+	cursor: pointer;
+}
+.route_content{
+	display: none;
+}
+.route_content_active{
+	display: block;
+}
+.route_active{
+	outline: none;
+}
+.table{
+   text-align: center; 
+   margin-bottom: 0px;
+}
+.table_container{
+	margin-right: 20px;
+}
+
+th{
+	text-align: center;
+	width: 100px;
+}
+td{
+	width: 100px;
+}
+.time-table{
+	overflow-y: scroll;
+	height: 120px;
+	border-bottom: solid #ddd;
+}
+.afternoon {
+	font-weight: bold;
+}
+.map{
+	text-align: center;
+}
+.map img{
+	max-height: 600px;
+	max-width: 960px;
+}
+.title{
+	margin-top: 0px;
+	padding: 15px;
+	height: 65px;
+}
+.download{
+	margin: 15px;
+	margin-right: 20px;
+}
+.west_michigan{
+	background-color: #0e694c;
+	color: #ffffff;
+}
+.cooper{
+	background-color: #ed681c;
+	color: #ffffff;
+}
+.lansing{
+	background-color: #681525;
+	color: #ffffff;
+}
+.east_michigan{
+	background-color: #073d7c;
+	color: #ffffff;
+}
+.jcc{
+	background-color: #113618;
+	color: #ffffff;
+}
+.francis{
+	background-color: #4b1e53;
+	color: #ffffff;
+
+}
+.southwest{
+	background-color: #d30024;
+	color: #ffffff;
+}
+.soper{
+	background-color: #4d1a0c;
+	color: #ffffff;
+}
+.ganson{
+	background-color: #140a22;
+	color: #ffffff;
+}
+.blackman{
+	background-color: #4d4f20;
+	color: #ffffff;
+}
+.mobile-show{
+	display: none;
+}
+
+
+
+/* Large desktop */
+@media (min-width: 1200px) { ... }
+ 
+/* Portrait tablet to landscape and desktop */
+@media (min-width: 768px) and (max-width: 979px) { ... }
+ 
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) { ... }
+ 
+/* Landscape phones and down */
+@media (max-width: 480px) { 
+
+.map img{
+	text-align: center;
+	width: 100%;
+}
+th{
+	font-size: 80%;
+	font-weight: normal;
+}
+table{
+
+}
+.tab-content{
+	margin-left: 0px;
+	margin-bottom: 20px;
+}
+.table_container{
+	margin-right: 0px;
+	max-width: 480px;
+	overflow-x: scroll;
+}
+.glyphicon{
+
+}
+.time-table{
+	overflow-y: none;
+	height: auto;
+	border-bottom: solid #ddd;
+}
+.mobile-show{
+	display: table-header-group;
+}
+
+

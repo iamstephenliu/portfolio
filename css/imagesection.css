@@ -1,0 +1,65 @@
+/* PHOTOGRAPHY SECTION */
+
+#photography , #photography_1000words {
+	overflow-y:none;
+	padding: 0;
+	max-width:1280px;
+}
+
+.picturechanger {
+	background: rgba(220,220,220,0.3);
+	width:40px;
+	z-index:5;
+	height:100%;
+}
+
+#previous {
+	float:left;
+	background-image:url('../icons/img_backward.png');
+	background-size: 40px auto;
+	background-position: center center;
+	background-repeat: no-repeat;
+}
+
+#next {
+	float:right;
+	background-image:url('../icons/img_forward.png');
+	background-size: 40px auto;
+	background-position: center center;
+	background-repeat: no-repeat;
+}
+
+#previous:hover {
+	background: rgba(220,220,220,0.6);
+	background-image:url('../icons/img_backward.png');
+	background-size: 40px auto;
+	background-position: center center;
+	background-repeat: no-repeat;
+}
+
+#next:hover {
+	background: rgba(220,220,220,0.6);
+	background-image:url('../icons/img_forward.png');
+	background-size: 40px auto;
+	background-position: center center;
+	background-repeat: no-repeat;
+}
+
+#image {
+	z-index:-2;
+	margin: 0 auto;
+	width:90%;
+	position:absolute;
+	background-size:auto 800px;
+	background-repeat:none;
+	background-position:center;
+
+}
+
+#displayimage {
+	margin:0 auto;
+	z-index:-1;
+	height:auto;
+}
+
+/*END PHOTOGRAPHY SECTION */

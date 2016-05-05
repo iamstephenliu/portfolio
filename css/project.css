@@ -1,0 +1,90 @@
+/* CONTENT SECTION */
+
+.contentimage {width:100%;}
+
+.row {margin:0em 1em;}
+
+.lightboxlink {color:#5B5A5A;}
+
+/* END CONTENT SECTION */
+
+/* VIDEOS */
+.video {margin:5em auto 0;}
+
+.video_half {
+	margin:0.4em 0;
+	position: relative;
+	display:inline-block;
+	float:right;
+	padding: 25% 0;
+	width: 48%;
+	height: 0;
+}
+
+.video_full {
+	position: relative;
+	display:block;
+	padding: 30% 0;
+	width: 100%;
+	height: 0;
+}
+
+.video_full_break {
+	position: relative;
+	display:block;
+	padding: 0;
+	margin:0;
+	width: 100%;
+	height: 100%;
+}
+
+.video_half iframe , .video_full iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+/* END VIDEOS */
+
+/* BREAK SECTION */
+
+.break {
+	box-shadow:0 0 1em 1em rgba(110,119,131,0.6);
+	background-size: auto 100%;
+	overflow-y:none;
+	padding: 0;
+	margin:0em auto;
+}
+
+.breakdiv {
+	padding:8em 1em;
+	margin:0;
+	color:#FFFFFF;
+	background:rgba(110,119,131,0.6);
+}
+
+.breaktext {
+	font-family: "Montserrat", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-weight:400;
+}
+
+/*END BREAK SECTION */
+
+/* Larger than mobile */
+@media (min-width: 400px) {}
+
+/* Larger than phablet (also point when grid becomes active) */
+@media (min-width: 640px) {
+	.row {margin:1em 1em;}
+	.breakdiv{margin:0;}
+}
+
+/* Larger than tablet */
+@media (min-width: 769px) {}
+
+/* Larger than desktop */
+@media (min-width: 1000px) {}
+
+/* Larger than Desktop HD */
+@media (min-width: 1280px) {}

@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+    <title>JATA Transportation Routes</title>
+
+	<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+	<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="bootstrap/css/bootstrap-theme.min.css">
+	<link rel="stylesheet" href="bootstrap/css/bootstrap-responsive.css">
+	<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+	<script src="bootstrap/js/bootstrap.min.js"></script>
+	<script src="bootstrap/js/bootstrap-tab.js"></script>
+	<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<div class="row-fluid">
+
+	<div class="tabs span3"/>
+		
+		<img class="logo" src="pictures/Jata_logo.png">
+		
+
+		<ul class="nav nav-tabs ">
+		  <li class="east_michigan active"><a href="#Routes" data-toggle="tab"><i class="fa fa-map-marker fa-2x"></i></a></li>
+		  <li><a class="southwest" href="#Updates" data-toggle="tab"><i class="fa fa-exclamation-triangle fa-2x"></i></a></li>
+		  <li><a class="ganson" href="#Info" data-toggle="tab"><i class="fa fa-info-circle fa-2x"></i></a></li>
+		</ul>
+
+		<div class="tab-content">
+		  <div class="tab-pane active" id="Routes">
+		  	<div id="route_container">
+			  	<ul class="nav nav-stacked route_tabs">
+					<!-- Place function call to Google Map in "data-toggle" section if Neccesary -->
+					<li class="route_active"><a rel="#EastMichigan" class="route_tab east_michigan">East Michigan Avenue</a></li>
+					<hr>
+					<li><a rel="#WestMichigan" class="route_tab west_michigan">West Michigan Avenue</a></li>
+					<hr>
+					<li><a rel="#SouthWest" class="route_tab southwest">South West Avenue</a></li>
+					<hr>
+					<li><a rel="#Cooper" class="route_tab cooper">Cooper Street</a></li>
+					<hr>
+					<li><a rel="#Lansing" class="route_tab lansing">Lansing Avenue</a></li>
+					<hr>
+					<li><a rel="#Francis" class="route_tab francis">Francis Street</a></li>
+					<hr>
+					<li><a rel="#WestGanson" class="route_tab ganson">West Ganson Route</a></li>
+					<hr>
+					<li><a rel="#JacksondaVinci" class="route_tab jcc">JCC/DaVinci Route</a></li>
+					<hr>
+					<li><a rel="#Blackman" class="route_tab blackman">Blackman-Summit Route</a></li>
+					<hr>
+					<li><a rel="#Soper" class="route_tab soper">Soper Line</a></li>
+				</ul>
+			</div>
+		  </div>
+		 <div class="tab-pane" id="Updates">
+		 <h4>Detour Blackman/Summit</h4>
+		 <p class="info_time">
+		  	Effective: 3/16/2014</br> 	
+		  	</p>
+		  <p>Effective immediately (March 16, 2014) the Blackman/Summit Route will take a detour due to poor road conditions.</br>
+ 
+			Starting at Airport Rd and Lawrence Ave., the bus will turn right onto Michigan Ave. instead of turning left. Thr Route will then turn left on Oak Grove, then right on Main St., and left on Robinson Rd. to complete the rest of the route.
+			The Oaks Apartment Complex and Washington Way will not be served. The residents of the Commons Apartment Complex will have to catch the bus on Main Street. They will need to signal to the driver to stop, due to no bus sign.
+		    </hr>
+
+			</p>
+		  </div>
+		  <div class="tab-pane" id="Info">
+		  	<h3>System Info</h3>
+		  	<p class="info_time">
+		  	6:00am-6:00pm Daily</br>
+		  	10:00am-6:00pm Weekends
+		  	</p>
+		    </br>
+		  	<h4>Fare</h4>
+		  	<div>
+		  		<p class="pull-right">$1.50</p>
+		  		<p>Adults:</p>
+		  		<p class="pull-right">$1.00</p>
+		  		<p>Students:</p>
+		  		<p class="pull-right">$0.75</p> 
+		  		<p>Senior, Child, Handicapped:</p>
+		  	</div>
+		  	</br>
+		  	<h4>31 Day Pass</h4>
+		  	<div>
+		  		<p class="pull-right">$54.00</p>
+		  		<p>Adults:</p> 
+		  		<p class="pull-right">$34.00</p>
+		  		<p>Students:</p>
+		  		<p class="pull-right">$27.00</p> 
+		  		<p>Senior, Child, Handicapped</p>
+		  	</div>
+		  </div>
+		</div>
+	</div>
+
+	<div class="Right_Content span9">
+		<div class="route_content_container">
+		<!-- Replace with Google Map if Neccesary -->
+			<div id="EastMichigan" class="route_content route_content_active">
+				<h3 class="title east_michigan">East Michigan Avenue</h3>
+				<div class="map" >
+					<img src="signs/01-eastmichiganmap.svg">
+				</div>
+				<div class="download">
+					<a href=""><i class="fa fa-download"> Download</i></a>
+				</div>
+				<div class="table_container">
+					<table class="table table-responsive table-condensed east_michigan hidden-phone">
+						<thead>
+							<tr><th>DEPART</th><th>E. MICH ELM</th><th>K-MART EAST</th><th>MEIJER EAST</th><th>PRINGLE ELM</th><th>STATE BLDG.</th><th>ARRIVAL</th></tr>
+						</thead>
+					</table>
+					<div class="time-table">
+						<table class="table table-striped table-condensed table-hover table-bordered table-responsive">
+						<thead class="mobile-show east_michigan">
+							<tr><th>DEPART</th><th>E. MICH ELM</th><th>K-MART EAST</th><th>MEIJER EAST</th><th>PRINGLE ELM</th><th>STATE BLDG.</th><th>ARRIVAL</th></tr>
+						</thead>
+						<tr><td>7:15</td><td>7:20</td><td>7:23</td><td>7:27</td><td>7:35</td><td>7:40</td><td>7:43</td></tr>
+						<tr><td>7:45</td><td>7:50</td><td>7:53</td><td>7:57</td><td>8:05</td><td>8:10</td><td>8:13</td></tr>
+						<tr><td>8:15</td><td>8:20</td><td>8:23</td><td>8:27</td><td>8:35</td><td>8:40</td><td>8:43</td></tr>
+						<tr><td>8:45</td><td>8:50</td><td>8:53</td><td>8:57</td><td>9:05</td><td>9:10</td><td>9:13</td></tr>
+						<tr><td>9:15</td><td>9:20</td><td>9:23</td><td>9:27</td><td>9:35</td><td>9:40</td><td>9:43</td></tr>
+						<tr><td>9:45</td><td>9:50</td><td>9:53</td><td>9:57</td><td>10:05</td><td>10:10</td><td>10:13</td></tr>
+						<tr><td>10:15</td><td>10:20</td><td>10:23</td><td>10:27</td><td>10:35</td><td>10:40</td><td>10:43</td></tr>
+						<tr><td>10:45</td><td>10:50</td><td>10:53</td><td>10:57</td><td>11:05</td><td>11:10</td><td>11:13</td></tr>
+						<tr><td>11:15</td><td>11:20</td><td>11:23</td><td>11:27</td><td>11:35</td><td>11:40</td><td>11:43</td></tr>
+						<tr><td>11:45</td><td>11:50</td><td>11:53</td><td>11:57</td><td>12:05</td><td>12:10</td><td>12:13</td></tr>
+						<tr class="afternoon"><td>PM</td></tr>
+						<tr><td>12:15</td><td>12:20</td><td>12:23</td><td>12:27</td><td>12:35</td><td>12:40</td><td>12:43</td></tr>
+						<tr><td>12:45</td><td>12:50</td><td>12:53</td><td>12:57</td><td>1:05</td><td>1:10</td><td>1:13</td></tr>
+						<tr><td>1:15</td><td>1:20</td><td>1:23</td><td>1:27</td><td>1:35</td><td>1:40</td><td>1:43</td></tr>
+						<tr><td>1:45</td><td>1:50</td><td>1:53</td><td>1:57</td><td>2:05</td><td>2:10</td><td>2:13</td></tr>
+						<tr><td>2:15</td><td>2:20</td><td>2:23</td><td>2:27</td><td>2:35</td><td>2:40</td><td>2:43</td></tr>
+						<tr><td>2:45</td><td>2:50</td><td>2:53</td><td>2:57</td><td>3:05</td><td>3:10</td><td>3:13</td></tr>
+						<tr><td>3:15</td><td>3:20</td><td>3:23</td><td>3:27</td><td>3:35</td><td>3:40</td><td>3:43</td></tr>
+						<tr><td>3:45</td><td>3:50</td><td>3:53</td><td>3:57</td><td>4:05</td><td>4:10</td><td>4:13</td></tr>
+						<tr><td>4:15</td><td>4:20</td><td>4:23</td><td>4:27</td><td>4:35</td><td>4:40</td><td>4:43</td></tr>
+						<tr><td>4:45</td><td>4:50</td><td>4:53</td><td>4:57</td><td>5:05</td><td>5:10</td><td>5:13</td></tr>
+						<tr><td>5:15</td><td>5:20</td><td>5:23</td><td>5:27</td><td>5:35</td><td>5:40</td><td>5:43</td></tr>
+						<tr><td>5:45</td><td>5:50</td><td>5:53</td><td>5:57</td><td>6:05</td><td>6:10</td><td>6:13</td></tr>
+						</table>
+					</div>
+				</div>
+			</div>
+			<div id="WestMichigan" class="route_content">
+				<h3 class="title west_michigan">West Michigan Avenue</h3>
+				<div class="map" >
+					<img src="signs/02-westmichiganmap.svg">
+				</div>
+				<div class="download">
+					<a href=""><i class="fa fa-download"> Download</i></a>
+				</div>
+				<div class="table_container">
+					<table class="table table-responsive table-condensed west_michigan hidden-phone">
+						<thead>
+							<tr><th>DEPART</th><th>REED MANOR</th><th>WESTWOOD MALL</th><th>POLLY'S SPRING ARBOR</th><th>WEST AVE. FRANKLIN</th><th>W. MICH. BLACKSONE</th><th>ARRIVAL</th></tr>
+						</thead>
+					</table>
+
+					<div class="time-table">
+						<table class="table table-striped table-condensed table-hover table-bordered table-responsive">
+						<thead class="mobile-show west_michigan">
+							<tr><th>DEPART</th><th>REED MANOR</th><th>WESTWOOD MALL</th><th>POLLY'S SPRING ARBOR</th><th>WEST AVE. FRANKLIN</th><th>W. MICH. BLACKSONE</th><th>ARRIVAL</th></tr>
+						</thead>
+						<tr><td>6:15</td><td>6:18</td><td>6:23</td><td>6:30</td><td>6:33</td><td>6:40</td><td>6:43</td></tr>
+						<tr><td>6:45</td><td>6:48</td><td>6:53</td><td>7:00</td><td>7:03</td><td>7:10</td><td>7:13</td></tr>
+						<tr><td>7:15</td><td>7:18</td><td>7:23</td><td>7:30</td><td>7:33</td><td>7:40</td><td>7:43</td></tr>
+						<tr><td>7:45</td><td>7:48</td><td>7:53</td><td>8:00</td><td>8:03</td><td>8:10</td><td>8:13</td></tr>
+						<tr><td>8:15</td><td>8:18</td><td>8:23</td><td>8:30</td><td>8:33</td><td>8:40</td><td>8:43</td></tr>
+						<tr><td>8:45</td><td>8:48</td><td>8:53</td><td>9:00</td><td>9:03</td><td>9:10</td><td>9:13</td></tr>
+						<tr><td>9:15</td><td>9:18</td><td>9:23</td><td>9:30</td><td>9:33</td><td>9:40</td><td>9:43</td></tr>
+						<tr><td>9:45</td><td>9:48</td><td>9:53</td><td>10:00</td><td>10:03</td><td>10:10</td><td>10:13</td></tr>
+						<tr><td>10:15</td><td>10:18</td><td>10:23</td><td>10:30</td><td>10:33</td><td>10:40</td><td>10:43</td></tr>
+						<tr><td>10:45</td><td>10:48</td><td>10:53</td><td>11:00</td><td>11:03</td><td>11:10</td><td>11:13</td></tr>
+						<tr><td>11:15</td><td>11:18</td><td>11:23</td><td>11:30</td><td>11:33</td><td>11:40</td><td>11:43</td></tr>
+						<tr><td>11:45</td><td>11:48</td><td>11:53</td><td>12:00</td><td>12:03</td><td>12:10</td><td>12:13</td></tr>
+						<tr class="afternoon"><td>PM</td></tr>
+						<tr><td>12:15</td><td>12:18</td><td>12:23</td><td>12:30</td><td>12:33</td><td>12:40</td><td>12:43</td></tr>
+						<tr><td>12:45</td><td>12:48</td><td>12:53</td><td>1:00</td><td>1:03</td><td>1:10</td><td>1:13</td></tr>
+						<tr><td>1:15</td><td>1:18</td><td>1:23</td><td>1:30</td><td>1:33</td><td>1:40</td><td>1:43</td></tr>
+						<tr><td>1:45</td><td>1:48</td><td>1:53</td><td>2:00</td><td>2:03</td><td>2:10</td><td>2:13</td></tr>
+						<tr><td>2:15</td><td>2:18</td><td>2:23</td><td>2:30</td><td>2:33</td><td>2:40</td><td>2:43</td></tr>
+						<tr><td>2:45</td><td>2:48</td><td>2:53</td><td>3:00</td><td>3:03</td><td>3:10</td><td>3:13</td></tr>
+						<tr><td>3:15</td><td>3:18</td><td>3:23</td><td>3:30</td><td>3:33</td><td>3:40</td><td>3:43</td></tr>
+						<tr><td>3:45</td><td>3:48</td><td>3:53</td><td>4:00</td><td>4:03</td><td>4:10</td><td>4:13</td></tr>
+						<tr><td>4:15</td><td>4:18</td><td>4:23</td><td>4:30</td><td>4:33</td><td>4:40</td><td>4:43</td></tr>
+						<tr><td>4:45</td><td>4:48</td><td>4:53</td><td>5:00</td><td>5:03</td><td>5:10</td><td>5:13</td></tr>
+						<tr><td>5:15</td><td>5:18</td><td>5:23</td><td>5:30</td><td>5:33</td><td>5:40</td><td>5:43</td></tr>
+						<tr><td>5:45</td><td>5:48</td><td>5:53</td><td>6:00</td><td>6:03</td><td>6:10</td><td>6:13</td></tr>
+						</table>
+					</div>
+				</div>
+			</div>
+			<div id="SouthWest" class="route_content">
+				<h3 class="title southwest">South West Avenue</h3>
+				<div class="map" >
+					<img src="signs/03-southwestmap.svg">
+				</div>
+				<div class="download">
+					<a href=""><i class="fa fa-download"> Download</i></a>
+				</div>
+				<div class="table_container">
+					<table class="table table-responsive table-condensed southwest hidden-phone">
+						<thead>
+							<tr><th>DEPART</th><th>FIRST MORELL</th><th>PARKSIDE SHARP PARK</th><th>S.WEST HIGH</th><th>MORRELL SIX</th><th>WASHINGTON SECOND</th><th>ARRIVAL</th></tr>
+						</thead>
+					</table>
+
+					<div class="time-table ">
+						<table  class="table table-striped table-condensed table-hover table-bordered table-responsive">
+						<thead class="mobile-show southwest">
+							<tr><th>DEPART</th><th>FIRST MORELL</th><th>PARKSIDE SHARP PARK</th><th>S.WEST HIGH</th><th>MORRELL SIX</th><th>WASHINGTON SECOND</th><th>ARRIVAL</th></tr>
+						</thead>
+						<tr><td>6:15</td><td>6:20</td><td>6:25</td><td>6:30</td><td>6:33</td><td>6:40</td><td>6:43</td></tr>
+						<tr><td>6:45</td><td>6:50</td><td>6:55</td><td>7:00</td><td>7:03</td><td>7:10</td><td>7:13</td></tr>
+						<tr><td>7:15</td><td>7:20</td><td>7:25</td><td>7:30</td><td>7:33</td><td>7:40</td><td>7:43</td></tr>
+						<tr><td>7:45</td><td>7:50</td><td>7:55</td><td>8:00</td><td>8:03</td><td>8:10</td><td>8:13</td></tr>
+						<tr><td>8:15</td><td>8:20</td><td>8:25</td><td>8:30</td><td>8:33</td><td>8:40</td><td>8:43</td></tr>
+						<tr><td>8:45</td><td>8:50</td><td>8:55</td><td>9:00</td><td>9:03</td><td>9:10</td><td>9:13</td></tr>
+						<tr><td>9:15</td><td>9:20</td><td>9:25</td><td>9:30</td><td>9:33</td><td>9:40</td><td>9:43</td></tr>
+						<tr><td>9:45</td><td>9:50</td><td>9:55</td><td>10:00</td><td>10:03</td><td>10:10</td><td>10:13</td></tr>
+						<tr><td>10:15</td><td>10:20</td><td>10:25</td><td>10:30</td><td>10:33</td><td>10:40</td><td>10:43</td></tr>
+						<tr><td>10:45</td><td>10:50</td><td>10:55</td><td>11:00</td><td>11:03</td><td>11:10</td><td>11:13</td></tr>
+						<tr><td>11:15</td><td>11:20</td><td>11:25</td><td>11:30</td><td>11:33</td><td>11:40</td><td>11:43</td></tr>
+						<tr><td>11:45</td><td>11:50</td><td>11:55</td><td>12:00</td><td>12:03</td><td>12:10</td><td>12:13</td></tr>
+						<tr class="afternoon"><td>PM</td></tr>
+						<tr><td>12:15</td><td>12:20</td><td>12:25</td><td>12:30</td><td>12:33</td><td>12:40</td><td>12:43</td></tr>
+						<tr><td>12:45</td><td>12:50</td><td>12:55</td><td>1:00</td><td>1:03</td><td>1:10</td><td>1:13</td></tr>
+						<tr><td>1:15</td><td>1:20</td><td>1:25</td><td>1:30</td><td>1:33</td><td>1:40</td><td>1:43</td></tr>
+						<tr><td>1:45</td><td>1:50</td><td>1:55</td><td>2:00</td><td>2:03</td><td>2:10</td><td>2:13</td></tr>
+						<tr><td>2:15</td><td>2:20</td><td>2:25</td><td>2:30</td><td>2:33</td><td>2:40</td><td>2:43</td></tr>
+						<tr><td>2:45</td><td>2:50</td><td>2:55</td><td>3:00</td><td>3:03</td><td>3:10</td><td>3:13</td></tr>
+						<tr><td>3:15</td><td>3:20</td><td>3:25</td><td>3:30</td><td>3:33</td><td>3:40</td><td>3:43</td></tr>
+						<tr><td>3:45</td><td>3:50</td><td>3:55</td><td>4:00</td><td>4:03</td><td>4:10</td><td>4:13</td></tr>
+						<tr><td>4:15</td><td>4:20</td><td>4:25</td><td>4:30</td><td>4:33</td><td>4:40</td><td>4:43</td></tr>
+						<tr><td>4:45</td><td>4:50</td><td>4:55</td><td>5:00</td><td>5:03</td><td>5:10</td><td>5:13</td></tr>
+						<tr><td>5:15</td><td>5:20</td><td>5:25</td><td>5:30</td><td>5:33</td><td>5:40</td><td>5:43</td></tr>
+						<tr><td>5:45</td><td>5:50</td><td>5:55</td><td>6:00</td><td>6:03</td><td>6:10</td><td>6:13</td></tr>
+						</table>
+					</div>
+				</div>
+			</div>
+			<div id="Cooper" class="route_content">
+				<h3 class="title cooper">Cooper Street</h3>
+				<div class="map" >
+					<img src="signs/04-coopermap.svg">
+				</div>
+				<div class="download">
+					<a href=""><i class="fa fa-download"> Download</i></a>
+				</div>
+				<div class="table_container">
+					<table class="table table-responsive table-condensed cooper hidden-phone">
+						<thead>
+							<tr><th>DEPART</th><th>COOPER NORTH</th><th>WOODLAND HILLS</th><th>PLEASANT NORTH</th><th>GANSON ELM</th><th>Armory Arts/Goodwill</th><th>ARRIVAL</th></tr>
+						</thead>
+					</table>
+					<div class="time-table">
+						<table class="table table-striped table-condensed table-hover table-bordered table-responsive">
+						<thead class="mobile-show cooper">
+							<tr><th>DEPART</th><th>COOPER NORTH</th><th>WOODLAND HILLS</th><th>PLEASANT NORTH</th><th>GANSON ELM</th><th>Armory Arts/Goodwill</th><th>ARRIVAL</th></tr>
+						</thead>		
+						<tr><td>6:15</td><td>6:19</td><td>6:23</td><td>6:30</td><td>6:32</td><td>6:35</td><td>6:43</td></tr>
+						<tr><td>6:45</td><td>6:49</td><td>6:53</td><td>7:00</td><td>7:02</td><td>7:05</td><td>7:13</td></tr>
+						<tr><td>7:15</td><td>7:19</td><td>7:23</td><td>7:30</td><td>7:32</td><td>7:35</td><td>7:43</td></tr>
+						<tr><td>7:45</td><td>7:49</td><td>7:53</td><td>8:00</td><td>8:02</td><td>8:05</td><td>8:13</td></tr>
+						<tr><td>8:15</td><td>8:19</td><td>8:23</td><td>8:30</td><td>8:32</td><td>8:35</td><td>8:43</td></tr>
+						<tr><td>8:45</td><td>8:49</td><td>8:53</td><td>9:00</td><td>9:02</td><td>9:05</td><td>9:13</td></tr>
+						<tr><td>9:15</td><td>9:19</td><td>9:23</td><td>9:30</td><td>9:32</td><td>9:35</td><td>9:43</td></tr>
+						<tr><td>9:45</td><td>9:49</td><td>9:53</td><td>10:00</td><td>10:02</td><td>10:05</td><td>10:13</td></tr>
+						<tr><td>10:15</td><td>10:19</td><td>10:23</td><td>10:30</td><td>10:32</td><td>10:35</td><td>10:43</td></tr>
+						<tr><td>10:45</td><td>10:49</td><td>10:53</td><td>11:00</td><td>11:02</td><td>11:05</td><td>11:13</td></tr>
+						<tr><td>11:15</td><td>11:19</td><td>11:23</td><td>11:30</td><td>11:32</td><td>11:35</td><td>11:43</td></tr>
+						<tr><td>11:45</td><td>11:49</td><td>11:53</td><td>12:00</td><td>12:02</td><td>12:05</td><td>12:13</td></tr>
+						<tr class="afternoon"><td>PM</td></tr>
+						<tr><td>12:15</td><td>12:19</td><td>12:23</td><td>12:30</td><td>12:32</td><td>12:35</td><td>12:43</td></tr>
+						<tr><td>12:45</td><td>12:49</td><td>12:53</td><td>1:00</td><td>1:02</td><td>1:05</td><td>1:13</td></tr>
+						<tr><td>1:15</td><td>1:19</td><td>1:23</td><td>1:30</td><td>1:32</td><td>1:35</td><td>1:43</td></tr>
+						<tr><td>1:45</td><td>1:49</td><td>1:53</td><td>2:00</td><td>2:02</td><td>2:05</td><td>2:13</td></tr>
+						<tr><td>2:15</td><td>2:19</td><td>2:23</td><td>2:30</td><td>2:32</td><td>2:35</td><td>2:43</td></tr>
+						<tr><td>2:45</td><td>2:49</td><td>2:53</td><td>3:00</td><td>3:02</td><td>3:05</td><td>3:13</td></tr>
+						<tr><td>3:15</td><td>3:19</td><td>3:23</td><td>3:30</td><td>3:32</td><td>3:35</td><td>3:43</td></tr>
+						<tr><td>3:45</td><td>3:49</td><td>3:53</td><td>4:00</td><td>4:02</td><td>4:05</td><td>4:13</td></tr>
+						<tr><td>4:15</td><td>4:19</td><td>4:23</td><td>4:30</td><td>4:32</td><td>4:35</td><td>4:43</td></tr>
+						<tr><td>4:45</td><td>4:49</td><td>4:53</td><td>5:00</td><td>5:02</td><td>5:05</td><td>5:13</td></tr>
+						<tr><td>5:15</td><td>5:19</td><td>5:23</td><td>5:30</td><td>5:32</td><td>5:35</td><td>5:43</td></tr>
+						<tr><td>5:45</td><td>5:49</td><td>5:53</td><td>6:00</td><td>6:02</td><td>6:05</td><td>6:13</td></tr>
+						</table>
+					</div>
+				</div>
+			</div>
+			<div id="Lansing" class="route_content">
+				<h3 class="title lansing">Lansing Avenue</h3>
+				<div class="map" >
+					<img src="signs/05-lansingavenuemap.svg">
+				</div>
+				<div class="download">
+					<a href=""><i class="fa fa-download"> Download</i></a>
+				</div>
+				<div class="table_container">
+					<table class="table table-responsive table-condensed lansing hidden-phone">
+						<thead>
+							<tr><th>DEPART</th><th>HEARTLAND</th><th>KROGER PLAZA</th><th>JACKSON CROSSING</th><th>MONROE BLACKSTONE</th><th>JACKSON TRAIL</th><th>ARRIVAL</th></tr>
+						</thead>
+					</table>
+					<div class="time-table">
+						<table class="table table-striped table-condensed table-hover table-bordered table-responsive">
+						<thead class="mobile-show lansing">
+							<tr><th>DEPART</th><th>HEARTLAND</th><th>KROGER PLAZA</th><th>JACKSON CROSSING</th><th>MONROE BLACKSTONE</th><th>JACKSON TRAIL</th><th>ARRIVAL</th></tr>
+						</thead>
+						<tr><td>6:15</td><td>6:20</td><td>6:25</td><td>6:30</td><td>6:35</td><td>6:40</td><td>6:43</td></tr>
+						<tr><td>6:45</td><td>6:50</td><td>6:55</td><td>7:00</td><td>7:05</td><td>7:10</td><td>7:13</td></tr>
+						<tr><td>7:15</td><td>7:20</td><td>7:25</td><td>7:30</td><td>7:35</td><td>7:40</td><td>7:43</td></tr>
+						<tr><td>7:45</td><td>7:50</td><td>7:55</td><td>8:00</td><td>8:05</td><td>8:10</td><td>8:13</td></tr>
+						<tr><td>8:15</td><td>8:20</td><td>8:25</td><td>8:30</td><td>8:35</td><td>8:40</td><td>8:43</td></tr>
+						<tr><td>8:45</td><td>8:50</td><td>8:55</td><td>9:00</td><td>9:05</td><td>9:10</td><td>9:13</td></tr>
+						<tr><td>9:15</td><td>9:20</td><td>9:25</td><td>9:30</td><td>9:35</td><td>9:40</td><td>9:43</td></tr>
+						<tr><td>9:45</td><td>9:50</td><td>9:55</td><td>10:00</td><td>10:05</td><td>10:10</td><td>10:13</td></tr>
+						<tr><td>10:15</td><td>10:20</td><td>10:25</td><td>10:30</td><td>10:35</td><td>10:40</td><td>10:43</td></tr>
+						<tr><td>10:45</td><td>10:50</td><td>10:55</td><td>11:00</td><td>11:05</td><td>11:10</td><td>11:13</td></tr>
+						<tr><td>11:15</td><td>11:20</td><td>11:25</td><td>11:30</td><td>11:35</td><td>11:40</td><td>11:43</td></tr>
+						<tr><td>11:45</td><td>11:50</td><td>11:55</td><td>12:00</td><td>12:05</td><td>12:10</td><td>12:13</td></tr>
+						<tr class="afternoon"><td>PM</td></tr>
+						<tr><td>12:15</td><td>12:20</td><td>12:25</td><td>12:30</td><td>12:35</td><td>12:40</td><td>12:43</td></tr>
+						<tr><td>12:45</td><td>12:50</td><td>12:55</td><td>1:00</td><td>1:05</td><td>1:10</td><td>1:13</td></tr>
+						<tr><td>1:15</td><td>1:20</td><td>1:25</td><td>1:30</td><td>1:35</td><td>1:40</td><td>1:43</td></tr>
+						<tr><td>1:45</td><td>1:50</td><td>1:55</td><td>2:00</td><td>2:05</td><td>2:10</td><td>2:13</td></tr>
+						<tr><td>2:15</td><td>2:20</td><td>2:25</td><td>2:30</td><td>2:35</td><td>2:40</td><td>2:43</td></tr>
+						<tr><td>2:45</td><td>2:50</td><td>2:55</td><td>3:00</td><td>3:05</td><td>3:10</td><td>3:13</td></tr>
+						<tr><td>3:15</td><td>3:20</td><td>3:25</td><td>3:30</td><td>3:35</td><td>3:40</td><td>3:43</td></tr>
+						<tr><td>3:45</td><td>3:50</td><td>3:55</td><td>4:00</td><td>4:05</td><td>4:10</td><td>4:13</td></tr>
+						<tr><td>4:15</td><td>4:20</td><td>4:25</td><td>4:30</td><td>4:35</td><td>4:40</td><td>4:43</td></tr>
+						<tr><td>4:45</td><td>4:50</td><td>4:55</td><td>5:00</td><td>5:05</td><td>5:10</td><td>5:13</td></tr>
+						<tr><td>5:15</td><td>5:20</td><td>5:25</td><td>5:30</td><td>5:35</td><td>5:40</td><td>5:43</td></tr>
+						<tr><td>5:45</td><td>5:50</td><td>5:55</td><td>6:00</td><td>6:05</td><td></td><td></td></tr>
+						</table>
+					</div>
+				</div>
+			</div>
+			<div id="Francis" class="route_content">
+				<h3 class="title francis">Francis Street</h3>
+				<div class="map" >
+					<img src="signs/06-francisstreetmap.svg">
+				</div>
+				<div class="download">
+					<a href=""><i class="fa fa-download"> Download</i></a>
+				</div>
+				<div class="table_container">
+					<table class="table table-responsive table-condensed francis hidden-phone">
+						<thead>
+							<tr><th>DEPART</th><th>HIGH FRANCIS</th><th>MERRIMAN PROSPECT</th><th>FRANCIS CLARK</th><th>FRANCIS PROSPECT</th><th>JACKSON WILKINS</th><th>ARRIVAL</th></tr>
+						</thead>
+					</table>
+					<div class="time-table">
+						<table class="table table-striped table-condensed table-hover table-bordered table-responsive">
+						<thead class="mobile-show francis">
+							<tr><th>DEPART</th><th>HIGH FRANCIS</th><th>MERRIMAN PROSPECT</th><th>FRANCIS CLARK</th><th>FRANCIS PROSPECT</th><th>JACKSON WILKINS</th><th>ARRIVAL</th></tr>
+						</thead>
+						<tr><td>6:15</td><td>6:20</td><td>6:25</td><td>6:30</td><td>6:35</td><td>6:40</td><td>6:43</td></tr>
+						<tr><td>6:45</td><td>6:50</td><td>6:55</td><td>7:00</td><td>7:05</td><td>7:10</td><td>7:13</td></tr>
+						<tr><td>7:15</td><td>7:20</td><td>7:25</td><td>7:30</td><td>7:35</td><td>7:40</td><td>7:43</td></tr>
+						<tr><td>7:45</td><td>7:50</td><td>7:55</td><td>8:00</td><td>8:05</td><td>8:10</td><td>8:13</td></tr>
+						<tr><td>8:15</td><td>8:20</td><td>8:25</td><td>8:30</td><td>8:35</td><td>8:40</td><td>8:43</td></tr>
+						<tr><td>8:45</td><td>8:50</td><td>8:55</td><td>9:00</td><td>9:05</td><td>9:10</td><td>9:13</td></tr>
+						<tr><td>9:15</td><td>9:20</td><td>9:25</td><td>9:30</td><td>9:35</td><td>9:40</td><td>9:43</td></tr>
+						<tr><td>9:45</td><td>9:50</td><td>9:55</td><td>10:00</td><td>10:05</td><td>10:10</td><td>10:13</td></tr>
+						<tr><td>10:15</td><td>10:20</td><td>10:25</td><td>10:30</td><td>10:35</td><td>10:40</td><td>10:43</td></tr>
+						<tr><td>10:45</td><td>10:50</td><td>10:55</td><td>11:00</td><td>11:05</td><td>11:10</td><td>11:13</td></tr>
+						<tr><td>11:15</td><td>11:20</td><td>11:25</td><td>11:30</td><td>11:35</td><td>11:40</td><td>11:43</td></tr>
+						<tr><td>11:45</td><td>11:50</td><td>11:55</td><td>12:00</td><td>12:05</td><td>12:10</td><td>12:13</td></tr>
+						<tr class="afternoon"><td>PM</td></tr>
+						<tr><td>12:15</td><td>12:20</td><td>12:25</td><td>12:30</td><td>12:35</td><td>12:40</td><td>12:43</td></tr>
+						<tr><td>12:45</td><td>12:50</td><td>12:55</td><td>1:00</td><td>1:05</td><td>1:10</td><td>1:13</td></tr>
+						<tr><td>1:15</td><td>1:20</td><td>1:25</td><td>1:30</td><td>1:35</td><td>1:40</td><td>1:43</td></tr>
+						<tr><td>1:45</td><td>1:50</td><td>1:55</td><td>2:00</td><td>2:05</td><td>2:10</td><td>2:13</td></tr>
+						<tr><td>2:15</td><td>2:20</td><td>2:25</td><td>2:30</td><td>2:35</td><td>2:40</td><td>2:43</td></tr>
+						<tr><td>2:45</td><td>2:50</td><td>2:55</td><td>3:00</td><td>3:05</td><td>3:10</td><td>3:13</td></tr>
+						<tr><td>3:15</td><td>3:20</td><td>3:25</td><td>3:30</td><td>3:35</td><td>3:40</td><td>3:43</td></tr>
+						<tr><td>3:45</td><td>3:50</td><td>3:55</td><td>4:00</td><td>4:05</td><td>4:10</td><td>4:13</td></tr>
+						<tr><td>4:15</td><td>4:20</td><td>4:25</td><td>4:30</td><td>4:35</td><td>4:40</td><td>4:43</td></tr>
+						<tr><td>4:45</td><td>4:50</td><td>4:55</td><td>5:00</td><td>5:05</td><td>5:10</td><td>5:13</td></tr>
+						<tr><td>5:15</td><td>5:20</td><td>5:25</td><td>5:30</td><td>5:35</td><td>5:40</td><td>5:43</td></tr>
+						<tr><td>5:45</td><td>5:50</td><td>5:55</td><td>6:00</td><td>6:05</td><td>6:10</td><td>6:13</td></tr>
+						<tr><td>1:45</td><td>1:50</td><td>1:55</td><td>2:00</td><td>2:05</td><td>2:10</td><td>2:13</td></tr>
+						<tr><td>2:15</td><td>2:20</td><td>2:25</td><td>2:30</td><td>2:35</td><td>2:40</td><td>2:43</td></tr>
+						<tr><td>2:45</td><td>2:50</td><td>2:55</td><td>3:00</td><td>3:05</td><td>3:10</td><td>3:13</td></tr>
+						<tr><td>3:15</td><td>3:20</td><td>3:25</td><td>3:30</td><td>3:35</td><td>3:40</td><td>3:43</td></tr>
+						<tr><td>3:45</td><td>3:50</td><td>3:55</td><td>4:00</td><td>4:05</td><td>4:10</td><td>4:13</td></tr>
+						<tr><td>4:15</td><td>4:20</td><td>4:25</td><td>4:30</td><td>4:35</td><td>4:40</td><td>4:43</td></tr>
+						<tr><td>4:45</td><td>4:50</td><td>4:55</td><td>5:00</td><td>5:05</td><td>5:10</td><td>5:13</td></tr>
+						<tr><td>5:15</td><td>5:20</td><td>5:25</td><td>5:30</td><td>5:35</td><td>5:40</td><td>5:43</td></tr>
+						<tr><td>5:45</td><td>5:50</td><td>5:55</td><td>6:00</td><td>6:05</td><td></td><td></td></tr>
+						</table>
+					</div>
+				</div>
+			</div>
+			<div id="WestGanson" class="route_content">
+				<h3 class="title ganson">West Ganson Route</h3>
+				<div class="table_container">
+					<table class="table table-responsive table-condensed ganson hidden-phone">
+						<thead>
+							<tr><th>DEPART</th><th>Medical Care Facility</th><th>American 1</th><th>West Bay APTS.</th><th>Kroger</th><th>Jackson Crossing</th><th>Walmart & West Wood Mall</th><th>Brown's Pharmacy</th><th>Ganson Baptist Church</th><th>Reed Manor</th><th>ARRIVAL</th></tr>
+						</thead>
+					</table>
+					<table class="table table-striped table-condensed table-hover table-bordered table-responsive">
+						<thead class="mobile-show ganson">
+							<tr><th>DEPART</th><th>Medical Care Facility</th><th>American 1</th><th>West Bay APTS.</th><th>Kroger</th><th>Jackson Crossing</th><th>Walmart & West Wood Mall</th><th>Brown's Pharmacy</th><th>Ganson Baptist Church</th><th>Reed Manor</th><th>ARRIVAL</th></tr>
+						</thead>
+						<tr><td>6:15</td><td>6:18</td><td>6:23</td><td>6:25</td><td>6:27</td><td>6:30</td><td>6:40</td><td>6:42</td><td>6:47</td><td>6:50</td><td>6:55</td></tr>
+						<tr><td>7:00</td><td>7:03</td><td>7:08</td><td>7:10</td><td>7:12</td><td>7:15</td><td>7:25</td><td>7:27</td><td>7:32</td><td>7:35</td><td>7:43</td></tr>
+						<tr><td>7:45</td><td>7:48</td><td>7:53</td><td>7:56</td><td>7:58</td><td>8:00</td><td>8:10</td><td>8:12</td><td>8:17</td><td>8:20</td><td>8:25</td></tr>
+						<tr><td>8:30</td><td>8:33</td><td>8:38</td><td>8:40</td><td>8:42</td><td>8:45</td><td>8:55</td><td>8:57</td><td>9:02</td><td>9:05</td><td>9:10</td></tr>
+						<tr><td>9:15</td><td>9:18</td><td>9:23</td><td>9:25</td><td>9:27</td><td>9:30</td><td>9:40</td><td>9:42</td><td>9:47</td><td>9:50</td><td>9:55</td></tr>
+						<tr><td>10:00</td><td>9:03</td><td>10:08</td><td>10:10</td><td>10:12</td><td>10:15</td><td>10:25</td><td>10:27</td><td>10:32</td><td>10:35</td><td>10:43</td></tr>
+						<tr><td>10:45</td><td>10:48</td><td>10:53</td><td>10:56</td><td>10:58</td><td>11:00</td><td>11:10</td><td>11:12</td><td>11:17</td><td>11:20</td><td>11:25</td></tr>
+						<tr><td>11:30</td><td>11:33</td><td>11:38</td><td>11:40</td><td>11:42</td><td>11:45</td><td>11:55</td><td>11:57</td><td>12:02</td><td>12:05</td><td>12:10</td></tr>
+						<tr class="afternoon"><td>PM</td></tr>
+						<tr><td>12:15</td><td>12:18</td><td>12:23</td><td>12:25</td><td>12:27</td><td>12:30</td><td>12:40</td><td>12:42</td><td>12:47</td><td>12:50</td><td>12:55</td></tr>
+						<tr><td>1:00</td><td>1:03</td><td>1:08</td><td>1:10</td><td>1:12</td><td>1:15</td><td>1:25</td><td>1:27</td><td>1:32</td><td>1:35</td><td>1:43</td></tr>
+						<tr><td>1:45</td><td>1:48</td><td>1:53</td><td>1:56</td><td>1:58</td><td>2:00</td><td>2:10</td><td>2:12</td><td>2:17</td><td>2:20</td><td>2:25</td></tr>
+						<tr><td>2:30</td><td>2:33</td><td>2:38</td><td>2:40</td><td>2:42</td><td>2:45</td><td>2:55</td><td>2:57</td><td>3:02</td><td>3:05</td><td>3:10</td></tr>
+						<tr><td>3:15</td><td>3:18</td><td>3:23</td><td>3:25</td><td>3:37</td><td>3:30</td><td>3:40</td><td>3:42</td><td>3:47</td><td>3:50</td><td>3:55</td></tr>
+						<tr><td>4:00</td><td>4:03</td><td>4:08</td><td>4:10</td><td>4:12</td><td>4:15</td><td>4:25</td><td>4:27</td><td>4:32</td><td>4:35</td><td>4:43</td></tr>
+						<tr><td>4:45</td><td>4:48</td><td>4:53</td><td>4:56</td><td>4:58</td><td>5:00</td><td>5:10</td><td>5:12</td><td>5:17</td><td>5:20</td><td>5:25</td></tr>
+						<tr><td>5:30</td><td>5:33</td><td>5:38</td><td>5:40</td><td>5:42</td><td>5:45</td><td>5:55</td><td>5:57</td><td>6:02</td><td>6:05</td><td>6:10</td></tr>
+					</table>
+				</div>
+			</div>
+			<div id="JacksondaVinci" class="route_content">
+				<h3 class="title jcc">JCC/DaVinci Route</h3>
+				<div class="map">
+					<img src="signs/08-JacksonCommunityCollege.svg">
+				</div>
+				<div class="download">
+					<a href=""><i class="fa fa-download"> Download</i></a>
+				</div>
+				<div class="table_container">
+					<table class="table table-responsive table-condensed jcc hidden-phone">
+						<thead>
+							<tr><th>DEPART</th><th>ATKINSON HALL</th><th>daVinci INSTITUTE</th><th>ATKINSON HALL</th><th>ARRIVAL</th></tr>
+						</thead>
+					</table>
+					<div class="time-table">
+						<table class="table table-striped table-condensed table-hover table-bordered table-responsive">
+							<thead class="mobile-show jcc">
+								<tr><th>DEPART</th><th>ATKINSON HALL</th><th>daVinci INSTITUTE</th><th>ATKINSON HALL</th><th>ARRIVAL</th></tr>
+							</thead>
+							<tr><td>7:20</td><td>7:35</td><td>7:37</td><td>7:40</td><td>7:55</td></tr>
+							<tr><td>8:20</td><td>8:35</td><td>-</td><td>8:45</td><td>9:00</td></tr>
+							<tr><td>10:20</td><td>10:35</td><td>-</td><td>10:45</td><td>11:00</td></tr>
+							<tr><td>11:20</td><td>11:35</td><td>-</td><td>11:45</td><td>12:00</td></tr>
+							<tr class="afternoon"><td>PM</td></tr>
+							<tr><td>12:20</td><td>12:35</td><td>12:40</td><td>12:45</td><td>1:00</td></tr>
+							<tr><td>2:20</td><td>2:35</td><td>3:05</td><td>3:15</td><td>3:30</td></tr>
+							<tr><td>5:10</td><td>5:25</td><td>-</td><td>5:25</td><td>5:45</td></tr>
+							<tr><td>-</td><td>9:15</td><td>-</td><td>9:15</td><td>9:30</td></tr>
+							<tr><td></td><td></td><td></td><td></td></tr>
+						</table>
+					</div>
+				</div>
+			</div>
+			<div id="Blackman" class="route_content">
+				<h3 class="title blackman">Blackman-Summit Route</h3>
+				<h4>Monday-Friday</h4>
+				<div class="table_container">
+					<table class="table table-responsive table-condensed blackman hidden-phone">
+						<thead>
+							<tr><th>DEPART</th><th>Medical Care Facility</th><th>Amer One</th><th>Jackson Crossing</th><th>The Water Store</th><th>Baker College</th><th>Park Forest</th><th>TAC</th><th>Meijer</th><th>Oak's</th><th>Commons</th><th>Polly's</th><th>ARRIVAL</th></tr>
+						</thead>
+					</table>
+					<table class="table table-striped table-condensed table-hover table-bordered table-responsive">
+						<thead class="mobile-show blackman">
+							<tr><th>DEPART</th><th>Medical Care Facility</th><th>Amer One</th><th>Jackson Crossing</th><th>The Water Store</th><th>Baker College</th><th>Park Forest</th><th>TAC</th><th>Meijer</th><th>Oak's</th><th>Commons</th><th>Polly's</th><th>ARRIVAL</th></tr>
+						</thead>
+						<tr><td>6:15</td><td>6:19</td><td>6:21</td><td>6:25</td><td>6:32</td><td>6:34</td><td>6:36</td><td>6:40</td><td>6:44</td><td>6:52</td><td>6:56</td><td>7:03</td><td>7:10</td></tr>
+						<tr><td>7:15</td><td>7:19</td><td>7:21</td><td>7:25</td><td>7:32</td><td>7:34</td><td>7:36</td><td>7:40</td><td>7:44</td><td>7:52</td><td>7:56</td><td>8:03</td><td>8:10</td></tr>
+						<tr><td>8:15</td><td>8:19</td><td>8:21</td><td>8:25</td><td>8:32</td><td>8:34</td><td>8:36</td><td>8:40</td><td>8:44</td><td>8:52</td><td>8:56</td><td>9:03</td><td>9:10</td></tr>
+						<tr><td>9:15</td><td>9:19</td><td>9:21</td><td>9:25</td><td>9:32</td><td>9:34</td><td>9:36</td><td>9:40</td><td>9:44</td><td>9:52</td><td>9:56</td><td>10:03</td><td>10:10</td></tr>
+						<tr><td>10:15</td><td>10:19</td><td>10:21</td><td>10:25</td><td>10:32</td><td>10:34</td><td>10:36</td><td>10:40</td><td>10:44</td><td>10:52</td><td>10:56</td><td>11:03</td><td>11:10</td></tr>
+						<tr><td>11:15</td><td>11:19</td><td>11:21</td><td>11:25</td><td>11:32</td><td>11:34</td><td>11:36</td><td>11:40</td><td>11:44</td><td>11:52</td><td>11:56</td><td>11:03</td><td>11:10</td></tr>
+						<tr class="afternoon"><td>PM</td></tr>
+						<tr><td>12:15</td><td>12:19</td><td>12:21</td><td>12:25</td><td>12:32</td><td>12:34</td><td>12:36</td><td>12:40</td><td>12:44</td><td>12:52</td><td>12:56</td><td>1:03</td><td>1:10</td></tr>
+						<tr><td>1:15</td><td>1:19</td><td>1:21</td><td>1:25</td><td>1:32</td><td>1:34</td><td>1:36</td><td>1:40</td><td>1:44</td><td>1:52</td><td>1:56</td><td>2:03</td><td>2:10</td></tr>
+						<tr><td>2:15</td><td>2:19</td><td>2:21</td><td>2:25</td><td>2:32</td><td>2:34</td><td>2:36</td><td>2:40</td><td>2:44</td><td>2:52</td><td>2:56</td><td>3:03</td><td>3:10</td></tr>
+						<tr><td>3:15</td><td>3:19</td><td>3:21</td><td>3:25</td><td>3:32</td><td>3:34</td><td>3:36</td><td>3:40</td><td>3:44</td><td>3:52</td><td>3:56</td><td>4:03</td><td>4:10</td></tr>
+						<tr><td>4:15</td><td>4:19</td><td>4:21</td><td>4:25</td><td>4:32</td><td>4:34</td><td>4:36</td><td>4:40</td><td>4:44</td><td>4:52</td><td>4:56</td><td>5:03</td><td>5:10</td></tr>
+						<tr><td>5:15</td><td>5:19</td><td>5:21</td><td>5:25</td><td>5:32</td><td>5:34</td><td>5:36</td><td>5:40</td><td>5:44</td><td>5:52</td><td>5:56</td><td>6:03</td><td>6:10</td></tr>
+						</table>
+				</div>
+				<h4>Saturday</h4>
+				<div class="table_container">
+					<table class="table table-responsive table-condensed blackman hidden-phone">
+						<thead>
+							<tr><th>DEPART</th><th>Medical Care Facility</th><th>Amer One</th><th>Jackson Crossing</th><th>The Water Store</th><th>Baker College</th><th>Park Forest</th><th>TAC</th><th>Meijer</th><th>Oak's</th><th>Commons</th><th>Polly's</th><th>ARRIVAL</th></tr>
+						</thead>
+					</table>
+					<table class="table table-striped table-condensed table-hover table-bordered table-responsive">
+						<thead class="mobile-show blackman">
+							<tr><th>DEPART</th><th>Medical Care Facility</th><th>Amer One</th><th>Jackson Crossing</th><th>The Water Store</th><th>Baker College</th><th>Park Forest</th><th>TAC</th><th>Meijer</th><th>Oak's</th><th>Commons</th><th>Polly's</th><th>ARRIVAL</th></tr>
+						</thead>
+						<tr><td>10:15</td><td>10:19</td><td>10:21</td><td>10:25</td><td>10:32</td><td>10:34</td><td>10:36</td><td>10:40</td><td>10:44</td><td>10:52</td><td>10:56</td><td>11:03</td><td>11:10</td></tr>
+						<tr><td>11:15</td><td>11:19</td><td>11:21</td><td>11:25</td><td>11:32</td><td>11:34</td><td>11:36</td><td>11:40</td><td>11:44</td><td>11:52</td><td>11:56</td><td>11:03</td><td>12:10</td></tr>
+						<tr class="afternoon"><td>PM</td></tr>
+						<tr><td>12:15</td><td>12:19</td><td>12:21</td><td>12:25</td><td>12:32</td><td>12:34</td><td>12:36</td><td>12:40</td><td>12:44</td><td>12:52</td><td>12:56</td><td>1:03</td><td>1:10</td></tr>
+						<tr><td>1:15</td><td>1:19</td><td>1:21</td><td>1:25</td><td>1:32</td><td>1:34</td><td>1:36</td><td>1:40</td><td>1:44</td><td>1:52</td><td>1:56</td><td>2:03</td><td>2:10</td></tr>
+						<tr><td>2:15</td><td>2:19</td><td>2:21</td><td>2:25</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>3:10</td></tr>
+						<tr><td>3:15</td><td>3:19</td><td>3:21</td><td>3:25</td><td>3:32</td><td>3:34</td><td>3:36</td><td>3:40</td><td>3:44</td><td>3:52</td><td>3:56</td><td>4:03</td><td>4:10</td></tr>
+						<tr><td>4:15</td><td>4:19</td><td>4:21</td><td>4:25</td><td>4:32</td><td>4:34</td><td>4:36</td><td>4:40</td><td>4:44</td><td>4:52</td><td>4:56</td><td>5:03</td><td>5:10</td></tr>
+						<tr><td>5:15</td><td>5:19</td><td>5:21</td><td>5:25</td><td>5:32</td><td>5:34</td><td>5:36</td><td>5:40</td><td>5:44</td><td>5:52</td><td>5:56</td><td>6:03</td><td>6:10</td></tr>
+					</table>
+				</div>
+
+			</div>
+			<div id="Soper" class="route_content">
+				<h3 class = "title soper">Soper Line</h3>
+				<div class="map" >
+					<img src="signs/09-soperline.svg">
+				</div>
+				<div class="download">
+					<a href=""><i class="fa fa-download"> Download</i></a>
+				</div>
+				<h4>Monday-Friday</h4>
+				<div class="table_container">
+					<table class="table table-responsive table-condensed soper hidden-phone">
+						<thead>
+							<tr><th>Meijer East</th><th>Veterans Clinic/Allegiance Health</th><th>Page/Fifth Street</th><th>MC High</th><th>Meijer East</th></tr>
+						</thead>
+					</table>
+					<div class="time-table">
+						<table class="table table-striped table-condensed table-hover table-bordered table-responsive">
+							<thead class="mobile-show soper">
+								<tr><th>Meijer East</th><th>Veterans Clinic/Allegiance Health</th><th>Page/Fifth Street</th><th>MC High</th><th>Meijer East</th></tr>
+							</thead>
+							<tr><td>7:00</td><td>7:06</td><td>7:07</td><td>7:10</td><td>7:25</td></tr>
+							<tr><td>7:30</td><td>7:36</td><td>7:37</td><td>7:40</td><td>7:55</td></tr>
+							<tr><td>8:00</td><td>8:06</td><td>8:07</td><td>8:10</td><td>8:25</td></tr>
+							<tr><td>8:30</td><td>8:36</td><td>8:37</td><td>8:40</td><td>8:55</td></tr>
+							<tr><td>9:00</td><td>9:06</td><td>9:07</td><td>9:10</td><td>9:25</td></tr>
+							<tr><td>9:30</td><td>9:36</td><td>9:37</td><td>9:40</td><td>9:55</td></tr>
+							<tr class="afternoon"><td>PM</td></tr>
+							<tr><td>1:00</td><td>1:06</td><td>1:07</td><td>1:10</td><td>1:25</td></tr>
+							<tr><td>-</td><td>1:36</td><td>1:37</td><td>1:40</td><td>1:55</td></tr>
+							<tr><td>2:00</td><td>2:06</td><td>2:07</td><td>2:10</td><td>2:25</td></tr>
+							<tr><td>2:30</td><td>2:36</td><td>2:37</td><td>2:40</td><td>2:55</td></tr>
+							<tr><td>3:00</td><td>3:06</td><td>3:07</td><td>3:10</td><td>3:25</td></tr>
+							<tr><td>3:30</td><td>3:36</td><td>3:37</td><td>3:40</td><td>3:55</td></tr>
+							<tr><td>4:00</td><td>4:06</td><td>4:07</td><td>4:10</td><td>4:25</td></tr>
+						</table>
+					</div>
+				</div>
+				<h4>Saturday</h4>
+				<div class="table_container">
+					<table class="table table-responsive table-condensed soper hidden-phone">
+						<thead>
+							<tr><th>Meijer East</th><th>Veterans Clinic/Allegiance Health</th><th>Page/Fifth Street</th><th>MC High</th><th>Meijer East</th></tr>
+						</thead>
+					</table>
+					<div class="time-table">
+						<table class="table table-striped table-condensed table-hover table-bordered table-responsive">
+							<thead class="mobile-show soper">
+								<tr><th>Meijer East</th><th>Veterans Clinic/Allegiance Health</th><th>Page/Fifth Street</th><th>MC High</th><th>Meijer East</th></tr>
+							</thead>
+							<tr><td>10:00</td><td>10:06</td><td>10:07</td><td>10:10</td><td>10:25</td></tr>
+							<tr><td>10:30</td><td>10:36</td><td>10:37</td><td>10:40</td><td>10:55</td></tr>
+							<tr><td>11:00</td><td>11:06</td><td>11:07</td><td>11:10</td><td>11:25</td></tr>
+							<tr><td>11:30</td><td>11:36</td><td>11:37</td><td>11:40</td><td>11:55</td></tr>
+							<tr class="afternoon"><td>PM</td></tr>
+							<tr><td>12:00</td><td>12:06</td><td>12:07</td><td>12:10</td><td>12:25</td></tr>
+							<tr><td>12:30</td><td>12:36</td><td>12:37</td><td>10:40</td><td>12:55</td></tr>
+							<tr><td>1:00</td><td>1:06</td><td>1:07</td><td>1:10</td><td>1:25</td></tr>
+							<tr><td>1:30</td><td>1:36</td><td>1:37</td><td>1:40</td><td>1:55</td></tr>
+							<tr><td>2:00</td><td>2:06</td><td>2:07</td><td>2:10</td><td>2:25</td></tr>
+							<tr><td>2:30</td><td>2:36</td><td>2:37</td><td>2:40</td><td>2:55</td></tr>
+							<tr><td>3:00</td><td>3:06</td><td>3:07</td><td>3:10</td><td>3:25</td></tr>
+							<tr><td>3:30</td><td>3:36</td><td>3:37</td><td>3:40</td><td>3:55</td></tr>
+							<tr><td>4:00</td><td>4:06</td><td>4:07</td><td>4:10</td><td>4:25</td></tr>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div> 
+		
+	</div>
+</div>
+
+
+<footer>
+	<p class="footer_content"> For More Information Please Contact the JATA Transit Center at: 517-787-8363<br>
+		<a href="jacksontransit.com">JacksonTransit.com</a>
+	</p>
+
+
+</footer>
+</body>
+</html>
+
+<script>
+// Load this script when page loads
+$(document).ready(function(){
+
+ // Set up a listener so that when anything with a class of 'tab' 
+ // is clicked, this function is run.
+ $('.route_tab').click(function () {
+
+  // Remove the 'active' class from the active tab.
+  $('#route_container > .route_tabs > li.active')
+	  .removeClass('active');
+	  
+  // Add the 'active' class to the clicked tab.
+  $(this).parent().addClass('active');
+
+  // Remove the 'tab_contents_active' class from the visible tab contents.
+  $('.route_content_container > .route_content_active')
+	  .removeClass('route_content_active');
+
+  // Add the 'tab_contents_active' class to the associated tab contents.
+  $(this.rel).addClass('route_content_active');
+
+ });
+});
+</script>
